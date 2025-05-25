@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles that extend Tailwind */
+@layer base {
+  body {
+    @apply bg-background-light text-text font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold mb-4 leading-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent;
+  }
+  
+  h2 {
+    @apply text-3xl text-primary mt-8;
+  }
+  
+  h3 {
+    @apply text-xl text-text;
+  }
+  
+  p {
+    @apply mb-4;
+  }
+  
+  a {
+    @apply text-primary transition-colors duration-300;
+  }
+  
+  a:hover {
+    @apply text-primary-hover;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-6xl mx-auto px-4;
+  }
+  
+  .btn-primary {
+    @apply inline-block bg-primary text-white py-3 px-6 rounded-lg font-medium transition-colors duration-300 text-center w-full;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-primary-hover text-white;
+  }
+  
+  .card {
+    @apply bg-background rounded-xl overflow-hidden shadow-card transition-all duration-300 border border-border;
+  }
+  
+  .card:hover {
+    @apply transform -translate-y-1 shadow-lg;
+  }
+  
+  .tag {
+    @apply bg-blue-50 text-primary px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .feature {
+    @apply flex items-center mb-2;
+  }
+  
+  .feature-icon {
+    @apply mr-2 text-lg;
+  }
+  
+  .feature-text {
+    @apply text-sm text-text-light;
+  }
+}
